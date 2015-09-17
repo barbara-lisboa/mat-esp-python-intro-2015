@@ -7,4 +7,12 @@ for i in range(0, N-1, 1): #para gerar a lista i usa-se o comando range, onde os
             temp = lista [i]  #temp funciona como uma terceira variavel, que é igual a variavel i
             lista [i] = lista [j] #i é igual a j, e temp continua sendo igual a i antes de ser igual a j
             lista [j] = temp #j troca de lugar com i
-print("lista em ordem crescente", lista) #python executa a lista original em ordem crescente 	
+print("lista em ordem crescente", lista) #python executa a lista original em ordem crescente 
+lista [0:5] 
+lista [N-5:N]
+print("cinco maiores valores", lista [N-5:N])
+print("cinco menores valores", lista [0:5])
+
+ 
+          
+    
