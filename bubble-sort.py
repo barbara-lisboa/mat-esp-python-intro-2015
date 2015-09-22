@@ -13,6 +13,22 @@ lista [N-5:N]
 print("cinco maiores valores", lista [N-5:N])
 print("cinco menores valores", lista [0:5])
 
- 
-          
-    
+#gráfico figura inicial (lista desorganizada)
+import matplotlib.pyplot as plt
+x = 1
+y = lista
+plt.figure()
+plt.plot(x,y,'ok')
+plt.title("Estado Inicial")
+plt.xlabel("Indice")
+plt.ylabel("Valor")
+plt.savefig("bubble-inicio.png")
+
+#gráfico figura final (lista organizada)
+import matplotlib.pyplot as plt
+plt.figure()
+plt.plot(x,y,'ok')
+plt.title("Estado Final")
+plt.xlabel("Indice")
+plt.ylabel("Valor")
+plt.savefig("bubble-fim.png")
