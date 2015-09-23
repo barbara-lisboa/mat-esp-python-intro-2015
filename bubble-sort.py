@@ -34,4 +34,3 @@ plt.xlabel("Indice")
 plt.ylabel("Valor")
 plt.savefig("bubble-fim.png")
 plt.close()
-
