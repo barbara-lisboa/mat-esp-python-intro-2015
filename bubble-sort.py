@@ -15,16 +15,17 @@ plt.close()
 print("lista original", lista) #python executa a lista original
 for i in range(0, N-1, 1): #para gerar a lista i usa-se o comando range, onde os dois primeiros valores representam o começo e o fim da lista, e o terceiro representa o intervalo entre eles
     for j in range(i+1, N, 1): #para gerar a lista j usa-se o comanado range, repitindo o processo anterior para determinar a ordem
+        troca = 0
         if lista [i] > lista [j]: #caso a i seja maior que j, aplica-se os proximos codigos, caso seja menor, pega-se o proximo numero
             temp = lista [i]  #temp funciona como uma terceira variavel, que é igual a variavel i
             lista [i] = lista [j] #i é igual a j, e temp continua sendo igual a i antes de ser igual a j
             lista [j] = temp #j troca de lugar com i
             plt.figure()
             plt.plot(range(0, N),lista,'ok')
-            plt.title("Estado Final")
+            plt.title("Estado Transitorio")
             plt.xlabel("Indice")
             plt.ylabel("Valor")
-            plt.savefig("fig/bubble-troca(j).png")
+            plt.savefig("fig/bubble-troca-{}.png".format(troca = troca+1))
             plt.close()
 print("lista em ordem crescente", lista) #python executa a lista original em ordem crescente 
 lista [0:5] 
@@ -33,7 +34,6 @@ print("cinco maiores valores", lista [N:N-6:-1])
 print("cinco menores valores", lista [0:5])
 
 #gráfico figura inicial (lista organizada)
-
 plt.figure()
 plt.plot(range(0, N),lista,'ok')
 plt.title("Estado Final")
