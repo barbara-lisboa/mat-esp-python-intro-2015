@@ -28,6 +28,17 @@ for i in range(0, N-1, 1): #para gerar a lista i usa-se o comando range, onde os
             plt.ylabel("Valor")
             plt.savefig("fig/bubble-troca-{}.png".format(troca))
             plt.close()
+            
+            plt.figure()
+            plt.plot(i,lista[i],'or')
+            plt.plot(j,lista[j],'ob')
+            plt.plot(range(0, N, 1),lista,'ok')
+            plt.title("Iteracao")
+            plt.xlabel("Indice")
+            plt.ylabel("Valor")
+            plt.savefig("fig/bubble-it-{}.png".format(troca))
+            plt.close()
+
 print("lista em ordem crescente", lista) #python executa a lista original em ordem crescente 
 lista [0:5] 
 lista [N:N-6:-1]
