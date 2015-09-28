@@ -13,9 +13,20 @@ plt.savefig("fig/bubble-inicio.png")
 plt.close()
 
 troca = 0
+iteracao = 0
 print("lista original", lista) #python executa a lista original
 for i in range(0, N-1, 1): #para gerar a lista i usa-se o comando range, onde os dois primeiros valores representam o começo e o fim da lista, e o terceiro representa o intervalo entre eles
     for j in range(i+1, N, 1): #para gerar a lista j usa-se o comanado range, repitindo o processo anterior para determinar a ordem
+        iteracao = iteracao + 1
+        plt.figure()
+        plt.plot(range(0, N, 1),lista,'ok')
+        plt.plot(i,lista [i],'or')
+        plt.plot(j,lista [j],'ob')
+        plt.title("Iteracao {}".format(iteracao))
+        plt.xlabel("Indice")
+        plt.ylabel("Valor")
+        plt.savefig("fig/bubble-it-{}.png".format(iteracao))
+        plt.close()
         if lista [i] > lista [j]: #caso a i seja maior que j, aplica-se os proximos codigos, caso seja menor, pega-se o proximo numero
             temp = lista [i]  #temp funciona como uma terceira variavel, que é igual a variavel i
             lista [i] = lista [j] #i é igual a j, e temp continua sendo igual a i antes de ser igual a j
@@ -29,20 +40,20 @@ for i in range(0, N-1, 1): #para gerar a lista i usa-se o comando range, onde os
             plt.savefig("fig/bubble-troca-{}.png".format(troca))
             plt.close()
             
-            plt.figure()
-            plt.plot(i,lista[i],'or')
-            plt.plot(j,lista[j],'ob')
-            plt.plot(range(0, N, 1),lista,'ok')
-            plt.title("Iteracao")
-            plt.xlabel("Indice")
-            plt.ylabel("Valor")
-            plt.savefig("fig/bubble-it-{}.png".format(troca))
-            plt.close()
-
 print("lista em ordem crescente", lista) #python executa a lista original em ordem crescente 
 lista [0:5] 
 lista [N:N-6:-1]
 print("cinco maiores valores", lista [N:N-6:-1])
 print("cinco menores valores", lista [0:5])
+
+#gráfico figura inicial (lista organizada)
+plt.figure()
+plt.plot(range(0, N),lista,'ok')
+plt.title("Estado Final")
+plt.xlabel("Indice")
+plt.ylabel("Valor")
+plt.savefig("fig/bubble-fim.png")
+plt.close()
+
 
 
